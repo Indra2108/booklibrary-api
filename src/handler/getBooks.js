@@ -14,6 +14,7 @@ const getBooks = (request, h) => {
         })
         response.code(200)
         return response
+
     } catch (error) {
         const response = h.response({
             status: "error",
@@ -22,6 +23,7 @@ const getBooks = (request, h) => {
         response.code(500)
         return response
     }
+    
 }
 
 module.exports = getBooks
