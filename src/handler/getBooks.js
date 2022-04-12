@@ -5,7 +5,11 @@ const getBooks = (request, h) => {
         const response = h.response({
             status: 'success',
             data: {
-                booksLibrary
+                booksLibrary: booksLibrary.map(b => ({
+                    id: b.id,
+                    name: b.name,
+                    publisher: b.publisher
+                }))
             }
         })
         response.code(200)
