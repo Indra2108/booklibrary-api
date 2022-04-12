@@ -1,0 +1,17 @@
+{
+  "name": "book-library-api",
+  "version": "1.0.0",
+  "description": "Book Library API",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon ./src/server.js"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Indra Damar Jati <Indra2108@github>",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/hapi": "^20.2.1"
+  }
+}
