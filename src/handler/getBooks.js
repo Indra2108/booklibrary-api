@@ -17,8 +17,7 @@ const getBooks = (request, h) => {
     } catch (error) {
         const response = h.response({
             status: "error",
-            message: "Internal Server Error",
-            messageError: error
+            message: "Internal Server Error"
         })
         response.code(500)
         return response
