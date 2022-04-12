@@ -33,7 +33,6 @@ const addBooks = (request, h) => {
             updatedAt
         }
 
-
         if (name === undefined || name === '' || name === null) {
             const response = h.response({
                 status: 'fail',
