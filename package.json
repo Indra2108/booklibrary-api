@@ -12,6 +12,7 @@
   "author": "Indra Damar Jati <Indra2108@github>",
   "license": "MIT",
   "dependencies": {
-    "@hapi/hapi": "^20.2.1"
+    "@hapi/hapi": "^20.2.1",
+    "nanoid": "^3.3.2"
   }
 }
