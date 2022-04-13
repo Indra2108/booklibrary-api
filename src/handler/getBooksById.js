@@ -10,7 +10,8 @@ const getBooksById = (request, h) => {
             const response = h.response({
                 status: 'success',
                 data: {
-                    book
+                    ...book,
+                    finished: book.pageCount === book.readPage
                 }
             })
             response.code(200)
