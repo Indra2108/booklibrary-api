@@ -14,3 +14,8 @@ npm install
 npm run start
 ```
 or, if you use `nodemon`, use `npm run test`
+
+- [Optional] Install ESLint
+```
+ npx eslint --init
+```
