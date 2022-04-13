@@ -1,3 +1,5 @@
+'use strict'
+
 // Library
 const Joi = require('joi')
 
@@ -19,7 +21,7 @@ const routes = [
         options: {
             validate: {
                 payload: inputDataSchema
-            },
+            }
         }
     },
     {
@@ -51,7 +53,7 @@ const routes = [
         options: {
             validate: {
                 payload: inputDataSchema
-            },
+            }
         }
     },
     {

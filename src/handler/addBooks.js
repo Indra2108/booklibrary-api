@@ -54,6 +54,7 @@ const addBooks = (request, h) => {
         booksLibrary.push(newBook)
 
         const isSuccess = booksLibrary.filter((book) => book.id).length > 0
+
         if (isSuccess) {
             const response = h.response({
                 status: "success",
@@ -74,7 +75,6 @@ const addBooks = (request, h) => {
         response.code(500)
         return response
     }
-
 }
 
 module.exports = addBooks

@@ -1,3 +1,5 @@
+'use strict'
+
 const booksLibrary = require("../assets/books")
 
 const editBooks = (request, h) => {
@@ -34,7 +36,7 @@ const editBooks = (request, h) => {
             return response
         }
 
-        const index = booksLibrary.findIndex((book) => book.id === bookId)
+        const index = booksLibrary.findIndex(book => book.id === bookId)
 
         if (index !== -1) {
             booksLibrary[index] = {
@@ -73,7 +75,6 @@ const editBooks = (request, h) => {
         response.code(500)
         return response
     }
-
 }
 
 module.exports = editBooks

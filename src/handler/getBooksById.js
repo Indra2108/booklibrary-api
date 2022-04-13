@@ -1,3 +1,5 @@
+'use strict'
+
 const booksLibrary = require("../assets/books")
 
 const getBooksById = (request, h) => {
@@ -23,7 +25,7 @@ const getBooksById = (request, h) => {
             message: 'Buku tidak ditemukan'
         })
         response.code(404)
-        return response 
+        return response
 
     } catch (error) {
         const response = h.response({

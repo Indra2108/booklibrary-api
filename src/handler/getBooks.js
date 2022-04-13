@@ -1,3 +1,5 @@
+'use strict'
+
 const booksLibrary = require('../assets/books')
 
 const getBooks = (request, h) => {
@@ -121,7 +123,6 @@ const getBooks = (request, h) => {
         response.code(500)
         return response
     }
-
 }
 
 module.exports = getBooks

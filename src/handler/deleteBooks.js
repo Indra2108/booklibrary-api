@@ -1,3 +1,5 @@
+'use strict'
+
 const booksLibrary = require("../assets/books")
 
 const deleteBooks = (request, h) => {
@@ -5,6 +7,7 @@ const deleteBooks = (request, h) => {
         const { bookId } = request.params
 
         const index = booksLibrary.findIndex((book) => book.id === bookId)
+
         if (index !== -1) {
             booksLibrary.splice(index, 1)
             const response = h.response({
@@ -30,7 +33,6 @@ const deleteBooks = (request, h) => {
         response.code(500)
         return response
     }
-
 }
 
 module.exports = deleteBooks
