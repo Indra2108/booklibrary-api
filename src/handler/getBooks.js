@@ -1,6 +1,6 @@
 'use strict'
 
-const booksLibrary = require('../assets/books')
+const books = require('../assets/books')
 
 const getBooks = (request, h) => {
     try {
@@ -12,7 +12,7 @@ const getBooks = (request, h) => {
                 status: 'success',
                 message: 'success search name',
                 data: {
-                    booksLibrary: booksLibrary
+                    books: books
                         .filter(data => data.name.toLowerCase().includes(name.toLowerCase()))
                         .map(b => ({
                             id: b.id,
@@ -32,7 +32,7 @@ const getBooks = (request, h) => {
                 status: 'success',
                 message: 'success search not reading book',
                 data: {
-                    booksLibrary: booksLibrary
+                    books: books
                         .filter(({ reading }) => reading === false)
                         .map(b => ({
                             id: b.id,
@@ -51,7 +51,7 @@ const getBooks = (request, h) => {
                 status: 'success',
                 message: 'success search reading book',
                 data: {
-                    booksLibrary: booksLibrary
+                    books: books
                         .filter(({ reading }) => reading === true)
                         .map(b => ({
                             id: b.id,
@@ -70,7 +70,7 @@ const getBooks = (request, h) => {
                 status: 'success',
                 message: 'success search unfinished book',
                 data: {
-                    booksLibrary: booksLibrary
+                    books: books
                         .filter(({ finished }) => finished === false)
                         .map(b => ({
                             id: b.id,
@@ -89,7 +89,7 @@ const getBooks = (request, h) => {
                 status: 'success',
                 message: 'success search finished book',
                 data: {
-                    booksLibrary: booksLibrary
+                    books: books
                         .filter(({ finished }) => finished === true)
                         .map(b => ({
                             id: b.id,
@@ -105,7 +105,7 @@ const getBooks = (request, h) => {
         const response = h.response({
             status: 'success',
             data: {
-                booksLibrary: booksLibrary.map(b => ({
+                books: books.map(b => ({
                     id: b.id,
                     name: b.name,
                     publisher: b.publisher

@@ -1,7 +1,7 @@
 'use strict'
 
 const { nanoid } = require("nanoid")
-const booksLibrary = require('../assets/books')
+const books = require('../assets/books')
 
 const addBooks = (request, h) => {
     try {
@@ -53,9 +53,9 @@ const addBooks = (request, h) => {
             return response
         }
 
-        booksLibrary.push(newBook)
+        books.push(newBook)
 
-        const isSuccess = booksLibrary.filter((book) => book.id).length > 0
+        const isSuccess = books.filter((book) => book.id).length > 0
 
         if (isSuccess) {
             const response = h.response({

@@ -1,6 +1,6 @@
 'use strict'
 
-const booksLibrary = require("../assets/books")
+const books = require("../assets/books")
 
 const editBooks = (request, h) => {
     try {
@@ -36,11 +36,11 @@ const editBooks = (request, h) => {
             return response
         }
 
-        const index = booksLibrary.findIndex(book => book.id === bookId)
+        const index = books.findIndex(book => book.id === bookId)
 
         if (index !== -1) {
-            booksLibrary[index] = {
-                ...booksLibrary[index],
+            books[index] = {
+                ...books[index],
                 name,
                 year,
                 author,

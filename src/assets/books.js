@@ -1,5 +1,5 @@
 'use strict'
 
-let booksLibrary = []
+let books = []
 
-module.exports = booksLibrary
+module.exports = books

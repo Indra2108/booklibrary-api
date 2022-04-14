@@ -1,19 +1,19 @@
 'use strict'
 
-const booksLibrary = require("../assets/books")
+const books = require("../assets/books")
 
 const getBooksById = (request, h) => {
     try {
         const { bookId } = request.params
 
-        const book = booksLibrary.filter((book) => book.id === bookId)[0]
+        const book = books.filter((book) => book.id === bookId)[0]
 
         if (book !== undefined) {
             const response = h.response({
                 status: 'success',
                 data: {
-                    ...book,
-                    finished: book.pageCount === book.readPage
+                    book: book,
+                    finished: books.pageCount === books.readPage
                 }
             })
             response.code(200)
